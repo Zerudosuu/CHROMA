@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 846689828}
   - component: {fileID: 846689827}
   - component: {fileID: 846689826}
-  m_Layer: 0
+  - component: {fileID: 846689830}
+  m_Layer: 8
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703dee31a4803fa4da1f13a51ab41efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 0
   rb: {fileID: 846689828}
   groundCheck: {fileID: 1372579141}
   groundLayer:
@@ -248,6 +250,19 @@ Transform:
   - {fileID: 1372579141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &846689830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846689825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d487209581ffb40b8bf9a9b29bcbf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1
 --- !u!1 &958793563
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +274,7 @@ GameObject:
   - component: {fileID: 958793566}
   - component: {fileID: 958793565}
   - component: {fileID: 958793564}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +368,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.7830189, g: 0.16620687, b: 0.16620687, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -418,6 +433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1389789122}
+  - component: {fileID: 1389789124}
   - component: {fileID: 1389789123}
   m_Layer: 0
   m_Name: sprite
@@ -493,6 +509,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1389789124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389789121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5e2b1c959cae94b9bc5479f56f335a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
+  canRotate: 1
 --- !u!1 &1426354694
 GameObject:
   m_ObjectHideFlags: 0
