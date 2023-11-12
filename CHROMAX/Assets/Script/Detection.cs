@@ -22,9 +22,10 @@ public class Detection : MonoBehaviour
         layerMask = ~layerMask;
 
         RaycastHit2D hitdown = Physics2D.Raycast(transform.position, -transform.up, distance, layerMask);
+        Debug.DrawRay(transform.position,-transform.up, Color.blue)   ;
 
         if(hitdown.collider != null) { 
-            Debug.Log(hitdown.collider.gameObject.layer);
+           
         }
 
 
@@ -32,11 +33,14 @@ public class Detection : MonoBehaviour
           RaycastHit2D hitleft = Physics2D.Raycast(transform.position, -transform.right, distance, layerMask);
 
          if(hitright.collider != null) { 
-          Debug.Log(hitright.collider.gameObject.layer);
+          
         }
 
          if(hitleft.collider != null) { 
-           Debug.Log(hitleft.collider.gameObject.layer);
+          
         }
     }
+
+
+    
 }
