@@ -463,6 +463,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sameColorLayerName: Blue
+  Color1: {fileID: 0}
+  Color2: {fileID: 0}
+  Color3: {fileID: 0}
+  Color1LayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &559703198
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +759,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sameColorLayerName: Green
+  Color1: {fileID: 0}
+  Color2: {fileID: 0}
+  Color3: {fileID: 0}
+  Color1LayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &846689825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1341,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sameColorLayerName: Red
+  Color1: {fileID: 0}
+  Color2: {fileID: 0}
+  Color3: {fileID: 0}
+  Color1LayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1548472569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,6 +1569,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sameColorLayerName: Yellow
+  Color1: {fileID: 462232198}
+  Color2: {fileID: 1501778957}
+  Color3: {fileID: 604304136}
+  Color1LayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2040876007
 GameObject:
   m_ObjectHideFlags: 0
