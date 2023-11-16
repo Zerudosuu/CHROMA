@@ -11,8 +11,6 @@ public class ColorCollision : MonoBehaviour
     public GameObject Color2;  
     public GameObject Color3;  
 
-    public LayerMask Color1LayerMask;
-
     private EdgeCollider2D ColliderColor1; 
     private EdgeCollider2D ColliderColor2; 
     private EdgeCollider2D ColliderColor3; 
@@ -21,21 +19,17 @@ public class ColorCollision : MonoBehaviour
 
     void Start()
     {
-        
-        Color1LayerMask = Color1.layer;
-        Debug.Log(Color1.gameObject.layer);
-        
-
         ColliderColor1 = Color1.GetComponent<EdgeCollider2D>(); 
         ColliderColor2 = Color2.GetComponent<EdgeCollider2D>(); 
-        ColliderColor2 = Color3.GetComponent<EdgeCollider2D>(); 
+        ColliderColor3 = Color3.GetComponent<EdgeCollider2D>(); // Correct assignment
         owncollider = GetComponent<EdgeCollider2D>();
 
         ColliderColor1.enabled = false; 
         ColliderColor2.enabled = false; 
         ColliderColor3.enabled = false; 
-        
+        owncollider.enabled = true;
 
+       
     }
 
     void Update()
@@ -44,54 +38,36 @@ public class ColorCollision : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col)
+{
+    int collidedLayer = col.gameObject.layer;
+
+    if (collidedLayer == Color1.layer || collidedLayer == Color2.layer || collidedLayer == Color3.layer)
     {
-       
-        // if (col.gameObject.layer == LayerMask.NameToLayer(sameColorLayerName))
-        // {
-        //     float thisRotationY = transform.eulerAngles.y;
-        //     float otherRotationY = col.transform.eulerAngles.y;
-
-        //     float yTolerance = 30f;
-
-        //     if (Mathf.Abs(Mathf.DeltaAngle(thisRotationY, otherRotationY)) < yTolerance)
-        //     {
-        //         isColliding = true;
-        //         Debug.Log("Yehey! Y-axes are facing each other.");
-        //         Debug.Log("Colliding with the same color");
-                
-        //     }
-        //     else
-        //     {
-        //         Debug.Log("Y-axes are not facing each other.");
-                
-        //     }
-        // }
-        // else if (col.gameObject.CompareTag("Ground"))
-        // {
-            
-        // }
-        // else
-        // {
-          
-        //     Debug.Log("Colliding with a different color");
-        // }
+        ColliderColor1.enabled = (collidedLayer == Color1.layer);
+        ColliderColor2.enabled = (collidedLayer == Color2.layer);
+        ColliderColor3.enabled = (collidedLayer == Color3.layer);
+        owncollider.enabled = false;
+        Debug.Log("Collided with Color");
     }
-
-    void OnCollisionStay2D(Collision2D col)
+    else if (collidedLayer == LayerMask.NameToLayer(sameColorLayerName))
     {
-       if (col.gameObject.layer == this.gameObject.layer) { 
-            Debug.Log("Collided with same color");
-        }else if(col.gameObject.layer == Color1.gameObject.layer) {
-            owncollider.enabled = false;
-            Debug.Log("Collision Detected for Color1");
-
-        }
+        ColliderColor1.enabled = false;
+        ColliderColor2.enabled = false;
+        ColliderColor3.enabled = false;
+        owncollider.enabled = true;
+        Debug.Log("Collided with Same Color");
     }
+    else if (col.gameObject.CompareTag("Ground"))
+    {
+
+        owncollider.enabled = true;
+        Debug.Log("Collided with Ground");
+    }
+}
 
     void OnCollisionExit2D(Collision2D collision)
     {
         isColliding = false;
         Debug.Log("Collision Exit with: " + collision.collider.name);
-    
     }
 }

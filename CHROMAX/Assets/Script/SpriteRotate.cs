@@ -1,35 +1,83 @@
 using UnityEngine;
 
-public class RotateSprite : MonoBehaviour
+public class RotateParent : MonoBehaviour
 {
-    public float rotationSpeed = 200.0f; // Adjust the rotation speed as needed
-    public bool canRotate = true; // To enable/disable rotation
+    private Transform[] childrenTransforms;
+    private Vector3[] positions;
+    private Quaternion[] rotations;
+    private int currentIndex = 0;
+
+    void Start()
+    {
+        childrenTransforms = new Transform[transform.childCount];
+        positions = new Vector3[]
+        {
+            new Vector3(0, 3.03f, 0), new Vector3(-2.92f, 0, 0),
+            new Vector3(0, -3.03f, 0), new Vector3(2.92f, 0, 0)
+        };
+        rotations = new Quaternion[]
+        {
+            Quaternion.Euler(0, 0, 0), Quaternion.Euler(0, 0, 90),
+            Quaternion.Euler(0, 0, 180), Quaternion.Euler(0, 0, 270)
+        };
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            childrenTransforms[i] = transform.GetChild(i);
+        }
+    }
 
     void Update()
     {
-        if (canRotate)
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            // Rotate clockwise by 90 degrees when 'O' is pressed
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                RotateClockwise();
-            }
+            RotateCounterClockwise();
+        }
+        else if (Input.GetKeyDown(KeyCode.O))
+        {
+            RotateClockwise();
+        }
+    }
 
-            // Rotate counterclockwise by 90 degrees when 'P' is pressed
-            if (Input.GetKeyDown(KeyCode.P))
+    void RotateCounterClockwise()
+    {
+        currentIndex = (currentIndex + 1) % 4;
+
+        if (currentIndex == 0)
+        {
+            for (int i = 0; i < childrenTransforms.Length; i++)
             {
-                RotateCounterClockwise();
+                childrenTransforms[i].SetLocalPositionAndRotation(positions[i], rotations[i]);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < childrenTransforms.Length; i++)
+            {
+                int rotationIndex = (currentIndex + i) % 4;
+                childrenTransforms[i].SetLocalPositionAndRotation(positions[rotationIndex], rotations[rotationIndex]);
             }
         }
     }
 
     void RotateClockwise()
     {
-        transform.Rotate(0, 0, -90);
-    }
+        currentIndex = (currentIndex - 1 + 4) % 4;
 
-    void RotateCounterClockwise()
-    {
-        transform.Rotate(0, 0, 90);
+        if (currentIndex == 0)
+        {
+            for (int i = 0; i < childrenTransforms.Length; i++)
+            {
+                childrenTransforms[i].SetLocalPositionAndRotation(positions[i], rotations[i]);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < childrenTransforms.Length; i++)
+            {
+                int rotationIndex = (currentIndex + i) % 4;
+                childrenTransforms[i].SetLocalPositionAndRotation(positions[rotationIndex], rotations[rotationIndex]);
+            }
+        }
     }
 }
