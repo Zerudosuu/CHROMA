@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -25,23 +26,25 @@ public class Script1 : MonoBehaviour
         }else { 
              owncollider.enabled = true;
         }
+
+
     }
 
-    void OnCollisionEnter2D(Collision2D collision) { 
-
-        float collisionRotation = collision.gameObject.transform.rotation.eulerAngles.z;
-        
-        if(collision.gameObject.layer == gameObject.layer) {
+   void OnCollisionEnter2D(Collision2D collision) { 
+    float collisionRotation = collision.gameObject.transform.rotation.eulerAngles.z;
+    
+    if(rotationZ == 90) { 
+        owncollider.enabled = false;
+        Debug.Log("yeeha");
+        // Perform other actions related to rotationZ == 90 here if needed
+    } else { 
+        if((collision.gameObject.layer == gameObject.layer) && (Mathf.Approximately(collisionRotation, 0f)) ) {
             isCollidingWithOwnColor = true;
+            Debug.Log("Collision Detected");
         }
-
-       if ((Mathf.Approximately(collisionRotation, 0f)) && (Mathf.Approximately(rotationZ, 270f) || Mathf.Approximately(rotationZ, 90f)))
-       {
-             owncollider.enabled = false;
-        }
-
-
     }
+}
+
 
 
     void OnCollisionExit2D(Collision2D collision) { 

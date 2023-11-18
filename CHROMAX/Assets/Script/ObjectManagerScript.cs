@@ -18,7 +18,10 @@ private Collider2D redCollider;
 private Collider2D greenCollider;  
 
 
-private float RedRotation; 
+public float RedRotation; 
+public float BlueRotation; 
+public float YellowRotation; 
+public float GreenRotation; 
 
 
   void Start() { 
@@ -28,22 +31,43 @@ private float RedRotation;
         redCollider = RedBlock.GetComponent<BoxCollider2D>();
         greenCollider = GreenBlock.GetComponent<BoxCollider2D>();
 
-        RedRotation = YellowBlock.transform.rotation.eulerAngles.z;
+     
 
 
   }
 
+void Update() { 
+    RedRotation = blockcheck.rotationValueRed;
+    BlueRotation = blockcheck.rotationValueBlue;
+    YellowRotation = blockcheck.rotationValueYellow;
+    GreenRotation = blockcheck.rotationValueGreen;
 
-  void Update() { 
-
-     if (blockcheck.isRedCollided && (RedRotation == 0 && (blockcheck.rotationValueRed == -90 || blockcheck.rotationValueRed == 270)))
-        {
-    Debug.Log("Activating Red");
+    if (RedRotation == 90 || RedRotation == 270 || RedRotation == -90) { 
+        redCollider.enabled = false;
+    } else {
+        redCollider.enabled = true; 
     }
 
-    Debug.Log("RedRotation "+ blockcheck.rotationValueRed); 
-    Debug.Log("Redblock "+ RedRotation); 
+      if (BlueRotation == 90 || BlueRotation == 270 || BlueRotation == -90) { 
+        blueCollider.enabled = false;
+    } else {
+        blueCollider.enabled = true; 
+    }
 
-  }
+      if (YellowRotation == 90 || YellowRotation == 270 || YellowRotation == -90) { 
+        yellowCollider.enabled = false;
+    } else {
+        yellowCollider.enabled = true; 
+    }
+
+      if (GreenRotation == 90 || GreenRotation == 270 || GreenRotation == -90) { 
+        greenCollider.enabled = false;
+    } else {
+        greenCollider.enabled = true; 
+    }
+
+
+}
+
 
 }
