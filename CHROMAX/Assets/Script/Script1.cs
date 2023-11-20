@@ -36,7 +36,7 @@ public class Script1 : MonoBehaviour
     if(rotationZ == 90) { 
         owncollider.enabled = false;
         Debug.Log("yeeha");
-        // Perform other actions related to rotationZ == 90 here if needed
+    
     } else { 
         if((collision.gameObject.layer == gameObject.layer) && (Mathf.Approximately(collisionRotation, 0f)) ) {
             isCollidingWithOwnColor = true;

@@ -6,23 +6,32 @@ public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
     private float speed = 8f;
-    private float JumpPower = 16f;
+    private float jumpPower = 16f;
     private bool isGrounded = false;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private string groundTag = "Ground"; // Define the ground tag here
 
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        // Check if the player is grounded
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        // Check if the player is grounded using tags
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.1f);
+        isGrounded = false;
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject && colliders[i].gameObject.CompareTag(groundTag))
+            {
+                isGrounded = true;
+                break;
+            }
+        }
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             // Jump only if grounded
-            rb.velocity = new Vector2(rb.velocity.x, JumpPower);
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         }
 
         // Reduce jump height if the jump button is released early
