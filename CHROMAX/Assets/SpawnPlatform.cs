@@ -6,6 +6,10 @@ public class SpawnPlatform : MonoBehaviour
 {
     public GameObject[] platformPrefabs;
     public int spawnCount = 300; 
+    public float maxHeight = 50f; 
+    public float minDistanceBetweenPlatforms = 1.0f;
+
+    private List<Vector3> spawnedPositions = new List<Vector3>();
 
     void Start()
     {
@@ -18,16 +22,33 @@ public class SpawnPlatform : MonoBehaviour
         for (int i = 0; i < spawnCount; i++)
         {
             Vector3 spawnPosition = new Vector3();
-            spawnPosition.y = Random.Range(.5f, 2f) * i; // Vary the y position based on the index
+            spawnPosition.y = Random.Range(.5f, 2f) * i; 
             spawnPosition.x = Random.Range(-5f, 5f);
 
-            // Randomly select a prefab from the platformPrefabs array
-            int randomIndex = Random.Range(0, platformPrefabs.Length);
-            GameObject prefabToSpawn = platformPrefabs[randomIndex];
+            if (!IsOverlapping(spawnPosition) && spawnPosition.y <= maxHeight)
+            {
+            
+                int randomIndex = Random.Range(0, platformPrefabs.Length);
+                GameObject prefabToSpawn = platformPrefabs[randomIndex];
 
-            // Instantiate the selected prefab at the random position
-            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+              
+                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+
+                spawnedPositions.Add(spawnPosition); 
+            }
         }
+    }
+
+    bool IsOverlapping(Vector3 position)
+    {
+        foreach (Vector3 spawnedPos in spawnedPositions)
+        {
+            if (Vector3.Distance(position, spawnedPos) < minDistanceBetweenPlatforms)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     void Update() { 

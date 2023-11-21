@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4514514739893135210}
   - component: {fileID: 7524518361043642375}
   - component: {fileID: 2881905608522601795}
-  - component: {fileID: 3616643488779751015}
+  - component: {fileID: 3357462472891875645}
+  - component: {fileID: 3631677832483129672}
   m_Layer: 16
   m_Name: GreenBlock
   m_TagString: Ground
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.04, y: -0.92, z: 0}
-  m_LocalScale: {x: 2.0895104, y: 0.37420547, z: 0.70832}
+  m_LocalScale: {x: 1.4221437, y: 0.47544298, z: 0.70832}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -151,7 +152,7 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &3616643488779751015
+--- !u!114 &3357462472891875645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,15 +161,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 5383083373481972505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b55fee10b1f1ea4a8ef21cbca2fcbc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ed44641181ca184ba0870aef6d449df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockcheck: {fileID: 0}
-  isYellowAffectedByRotation: 0
-  isBlueAffectedByRotation: 0
-  isRedAffectedByRotation: 0
-  isGreenAffectedByRotation: 0
-  YellowRotation: 0
-  BlueRotation: 0
-  RedRotation: 0
+  block: {fileID: 0}
   GreenRotation: 0
+--- !u!114 &3631677832483129672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5383083373481972505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac0d8dc34ddb84f8fedaaccab0250c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 10

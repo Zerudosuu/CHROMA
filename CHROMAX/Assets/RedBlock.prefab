@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2073168329006650135}
   - component: {fileID: 2456812502927734386}
   - component: {fileID: 5922652178582035772}
+  - component: {fileID: -50424866627959318}
+  - component: {fileID: 714001527112303429}
   m_Layer: 13
   m_Name: RedBlock
   m_TagString: Ground
@@ -29,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.18, y: -1.78, z: 0}
-  m_LocalScale: {x: 2.1879687, y: 0.3540574, z: 1}
+  m_LocalScale: {x: 1.3651026, y: 0.4603393, z: 0.57574}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -150,3 +152,31 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &-50424866627959318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4580312862576084079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7b0cd389b8e114fa74e77e8af45bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  block: {fileID: 0}
+  isRedAffectedbyRotation: 0
+  RedRotation: 0
+--- !u!114 &714001527112303429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4580312862576084079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac0d8dc34ddb84f8fedaaccab0250c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 10

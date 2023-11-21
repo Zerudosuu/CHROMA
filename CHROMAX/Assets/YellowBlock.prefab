@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3149099003258499682}
   - component: {fileID: 7127683299888323537}
   - component: {fileID: 5481902332474727330}
+  - component: {fileID: 4911321550894306783}
   m_Layer: 15
   m_Name: YellowBlock
   m_TagString: Ground
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.2055, y: -1.69, z: 0}
-  m_LocalScale: {x: 2.489366, y: 0.436199, z: 0.65529}
+  m_LocalScale: {x: 1.3534706, y: 0.48697215, z: 0.5568262}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -93,7 +94,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7904935828025128561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -150,3 +151,18 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &4911321550894306783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7904935828025128561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b55fee10b1f1ea4a8ef21cbca2fcbc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  block: {fileID: 0}
+  isYellowAffectedByRotation: 0
+  YellowRotation: 0
