@@ -5,13 +5,19 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
-    private float jumpPower = 16f;
+    public float speed = 8f;
+    public float jumpPower = 16f;
     private bool isGrounded = false;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private string groundTag = "Ground"; 
 
+
+
+
+    void  Start() { 
+        rb = GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");

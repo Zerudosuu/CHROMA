@@ -9,6 +9,7 @@ TagManager:
   - Yellow
   - Green
   - Ground
+  - Wall
   layers:
   - Default
   - TransparentFX

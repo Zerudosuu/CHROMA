@@ -17,9 +17,14 @@ private Collider2D blueCollider;
 private Collider2D redCollider; 
 private Collider2D greenCollider;  
 
+public  float yellowBlockRotationZ;
+public  float blueBlockRotationZ;
+public  float redBlockRotationZ;
+public  float greenBlockRotationZ;
+
+public float BlueRotation; 
 
 public float RedRotation; 
-public float BlueRotation; 
 public float YellowRotation; 
 public float GreenRotation; 
 
@@ -31,7 +36,12 @@ public float GreenRotation;
         redCollider = RedBlock.GetComponent<BoxCollider2D>();
         greenCollider = GreenBlock.GetComponent<BoxCollider2D>();
 
-     
+      yellowBlockRotationZ = YellowBlock.transform.rotation.eulerAngles.z;
+       blueBlockRotationZ = BlueBlock.transform.rotation.eulerAngles.z;
+        redBlockRotationZ = RedBlock.transform.rotation.eulerAngles.z;
+      greenBlockRotationZ = GreenBlock.transform.rotation.eulerAngles.z;
+
+
 
 
   }
@@ -42,7 +52,7 @@ void Update() {
     YellowRotation = blockcheck.rotationValueYellow;
     GreenRotation = blockcheck.rotationValueGreen;
 
-    if (RedRotation == 90 || RedRotation == 270 || RedRotation == -90) { 
+    if (RedRotation == 90 || RedRotation == 270 || RedRotation == -90 ) { 
         redCollider.enabled = false;
     } else {
         redCollider.enabled = true; 
@@ -65,6 +75,9 @@ void Update() {
     } else {
         greenCollider.enabled = true; 
     }
+
+
+
 
 
 }

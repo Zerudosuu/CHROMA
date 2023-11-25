@@ -12,8 +12,8 @@ public class RotateParent : MonoBehaviour
         childrenTransforms = new Transform[transform.childCount];
         positions = new Vector3[]
         {
-            new Vector3(0, 3.03f, 0), new Vector3(-2.92f, 0, 0),
-            new Vector3(0, -3.03f, 0), new Vector3(2.92f, 0, 0)
+            new Vector3(0, 3.03f, 0), new Vector3(-3f, 0, 0),
+            new Vector3(0, -3.03f, 0), new Vector3(3.06f, 0, 0)
         };
         rotations = new Quaternion[]
         {
