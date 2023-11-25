@@ -5,6 +5,8 @@ using UnityEngine;
 public class VerticalBlockGreen : MonoBehaviour
 {
      public ObjectManagerScript block; 
+
+     
     public bool isGreenAffectedByRotation = false; 
     public float GreenRotation; 
 
@@ -23,8 +25,6 @@ public class VerticalBlockGreen : MonoBehaviour
     } else {
         greenCollider.enabled = false; 
     }
-
-  
 
     }
 }

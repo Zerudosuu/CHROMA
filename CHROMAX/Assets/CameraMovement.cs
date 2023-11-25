@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -7,26 +8,38 @@ public class CameraMovement : MonoBehaviour
     public float yOffset;
     public float offsetSmoothing;
 
-    private Vector3 velocity = Vector3.zero;
+   public float distanceBelowCamera = 5f;
+
+    // private Vector3 velocity = Vector3.zero;
 
     void Start()
     {
-        // Set the initial camera position including the desired Z offset
-        transform.position = new Vector3(transform.position.x, transform.position.y, -20f);
+        // // Set the initial camera position including the desired Z offset
+        // transform.position = new Vector3(transform.position.x, transform.position.y, -20f);
     }
 
-    void LateUpdate()
+   void Update()
+{
+    float destroyY = transform.position.y - distanceBelowCamera;
+
+    if (player.position.y < destroyY || 
+        player.position.x < transform.position.x - 10f || 
+        player.position.x > transform.position.x + 10f) 
     {
-        // Get the position of the player
-        Vector3 playerPosition = player.position;
-
-        // Calculate target position with offsets
-        Vector3 targetPosition = playerPosition + new Vector3(xOffset, yOffset, -10f); // Set Z to -10
-
-        // Smoothly move the camera towards the target position using SmoothDamp
-        Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, offsetSmoothing);
-
-        // Update the camera's position
-        transform.position = smoothedPosition;
+        Debug.Log("Destroyed or Trigger Action!");
+        // Add code here to destroy the player or trigger an action
     }
+}
+    
+    void LateUpdate() 
+{
+    
+    if(player.position.y > transform.position.y) { 
+        Vector3 newPosition = new Vector3(transform.position.x, player.position.y, transform.position.z);
+        transform.position = newPosition;
+    }
+
+  
+}
+
 }
