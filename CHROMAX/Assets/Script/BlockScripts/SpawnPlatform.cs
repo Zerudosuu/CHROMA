@@ -27,12 +27,20 @@ public class SpawnPlatform : MonoBehaviour
 
             if (!IsOverlapping(spawnPosition) && spawnPosition.y <= maxHeight)
             {
-            
                 int randomIndex = Random.Range(0, platformPrefabs.Length);
                 GameObject prefabToSpawn = platformPrefabs[randomIndex];
 
-              
-                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+                GameObject spawnedPrefab = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+
+                // Access the PlatformMovementScript component of the spawned platform
+                PlatformMovementScript movementScript = spawnedPrefab.GetComponent<PlatformMovementScript>();
+
+                if (movementScript != null)
+                {
+                    // Modify the properties of the PlatformMovementScript for randomness
+                    movementScript.speed = Random.Range(1.0f, 3.0f); // Example: Randomize speed
+                    // You can add more randomizations here for different properties
+                }
 
                 spawnedPositions.Add(spawnPosition); 
             }
@@ -51,7 +59,5 @@ public class SpawnPlatform : MonoBehaviour
         return false;
     }
 
-    void Update() { 
-        
-    }
+    void Update() { }
 }
