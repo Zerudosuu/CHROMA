@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Script2: MonoBehaviour
+public class Script3 : MonoBehaviour
 {
     public bool isCollidingWithOwnColor = false;
     public float rotationZ;
 
     private Collider2D owncollider;
 
-    public GameObject YellowBlock; 
+    public GameObject Blueblock; 
 
     
     void Start()
@@ -28,14 +28,13 @@ public class Script2: MonoBehaviour
         }else { 
              owncollider.enabled = true;
         }
-
-        if(gameObject.transform.position.x < YellowBlock.transform.position.x && rotationZ == 90 ) {
+        if(gameObject.transform.position.x < Blueblock.transform.position.x && rotationZ == 90 ) {
             owncollider.enabled = false; 
         } else { 
              owncollider.enabled = true;
         }
 
-        if(gameObject.transform.position.x > YellowBlock.transform.position.x && rotationZ == 270 || rotationZ == -90 ) { 
+        if(gameObject.transform.position.x > Blueblock.transform.position.x && rotationZ == 270 || rotationZ == -90 ) { 
              owncollider.enabled = false; 
         }else { 
              owncollider.enabled = true;
