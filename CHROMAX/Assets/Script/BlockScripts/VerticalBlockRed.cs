@@ -5,38 +5,25 @@ using UnityEngine;
 
 public class VerticalBlockRed : MonoBehaviour
 {
-   public ObjectManagerScript block; 
-   
-    public bool isRedAffectedByRotation = false; 
-    public float RedRotation; 
-
     public GameObject player;
-    Collider2D redCollider; 
+    Collider2D redCollider;
 
-    void Start() { 
+    void Start()
+    {
         redCollider = gameObject.GetComponent<BoxCollider2D>();
     }
+
     void Update()
     {
-        RedRotation = block.RedRotation;
-      
-
-       if (player.transform.position.x  <= gameObject.transform.position.x && RedRotation == 90)
+        if (player.transform.position.x <= gameObject.transform.position.x)
         {
-            redCollider.enabled = false;
-        }
-        else if (player.transform.position.x  >= gameObject.transform.position.x && (RedRotation == 270 || RedRotation == -90))
-        {
+            // Player is on or left of the block, disable collider
             redCollider.enabled = false;
         }
         else
         {
+            // Player is to the right of the block, enable collider
             redCollider.enabled = true;
         }
-
-
     }
-
-  
-   
 }

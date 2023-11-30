@@ -2017,6 +2017,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4514514739893135210, guid: 411a59a996e276742bec87bef6c51731, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5383083373481972505, guid: 411a59a996e276742bec87bef6c51731, type: 3}
       propertyPath: m_Name
       value: GreenBlock
@@ -2063,6 +2067,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5366307629959266209, guid: 3fd1dd4d6f4653641a9c02c76dc77298, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6182706439614360644, guid: 3fd1dd4d6f4653641a9c02c76dc77298, type: 3}
       propertyPath: m_Name
       value: GameObject
@@ -2172,6 +2180,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6239355272336252513, guid: 7c425bb4eb177544a9bd3cd9b29da280, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6510111805335694909, guid: 7c425bb4eb177544a9bd3cd9b29da280, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.08650902
@@ -2277,6 +2289,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5725197030426378918, guid: 61fad8c3d461d3d4ebedd1beff7f40a5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5800785003151159731, guid: 61fad8c3d461d3d4ebedd1beff7f40a5, type: 3}
       propertyPath: m_Icon
       value: 
@@ -2381,6 +2397,10 @@ PrefabInstance:
     - target: {fileID: 2073168329006650135, guid: 4b0a4853346cfad4ba2b685f774d40d9, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073168329006650135, guid: 4b0a4853346cfad4ba2b685f774d40d9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2456812502927734386, guid: 4b0a4853346cfad4ba2b685f774d40d9, type: 3}
       propertyPath: m_Size.x
