@@ -44,12 +44,19 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
+
+  spriteMode: 1
+
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
   spritePivot: {x: 0.498814, y: 0.87399447}
   spritePixelsToUnits: 100
+
   spriteBorder: {x: 78, y: 838, z: 70, w: 45}
+
+  spriteBorder: {x: 0, y: 830, z: 0, w: 35}
+
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -134,6 +141,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+
     sprites:
     - serializedVersion: 2
       name: Untitled587_20231123230128_1
@@ -156,6 +164,9 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+
+    sprites: []
+
     outline: []
     physicsShape: []
     bones: []
@@ -166,9 +177,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+
     nameFileIdTable:
       Untitled587_20231123230128_0: -875496867
       Untitled587_20231123230128_1: -1490263962
+
+    nameFileIdTable: {}
+
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
