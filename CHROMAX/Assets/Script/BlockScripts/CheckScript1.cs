@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CheckScriptBlue : MonoBehaviour
 {
-    // Start is called before the first frame update
-     public ObjectManagerScript block; 
+    
+    public ObjectManagerScript block; 
     public bool isYellowAffectedByRotation = false; 
     public float BlueRotation; 
 

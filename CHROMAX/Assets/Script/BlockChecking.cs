@@ -30,23 +30,5 @@ public class BlockChecking : MonoBehaviour
         rotationValueBlue = blueBlockScripts.rotationZ; 
         rotationValueYellow = yellowBlockScripts.rotationZ; 
         rotationValueGreen = greenBlockScripts.rotationZ; 
-
-
-        if (isRedCollided)
-        {
-            Debug.Log("Red collision");
-        }
-        else if (isBlueCollided)
-        {
-            Debug.Log("Blue collision");
-        }
-        else if (isYellowCollided)
-        {
-            Debug.Log("Yellow collision");
-        }
-        else if (isGreenCollided)
-        {
-            Debug.Log("Green collision");
-        }
     }
 }

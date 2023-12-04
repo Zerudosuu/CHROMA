@@ -44,19 +44,12 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-
-  spriteMode: 1
-
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.498814, y: 0.87399447}
+  spritePivot: {x: 0.5035581, y: 0.87399447}
   spritePixelsToUnits: 100
-
-  spriteBorder: {x: 78, y: 838, z: 70, w: 45}
-
-  spriteBorder: {x: 0, y: 830, z: 0, w: 35}
-
+  spriteBorder: {x: 69, y: 829, z: 54, w: 28}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -141,32 +134,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-
     sprites:
     - serializedVersion: 2
-      name: Untitled587_20231123230128_1
+      name: Untitled587_20231123230128_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 841
-        width: 1820
-        height: 190
+        x: 1905
+        y: 1059
+        width: 9
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2f300d252a821140b0f071dd50b87fd
-      internalID: -1490263962
+      spriteID: 9efe1b87b5e0798458c7a3bd63f3fe07
+      internalID: -2021705439
       vertices: []
       indices: 
       edges: []
       weights: []
-
-    sprites: []
-
+    - serializedVersion: 2
+      name: Untitled587_20231123230128_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 832
+        width: 1827
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 14, z: 0, w: 9}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992e956cd7d8b464faa2681535a6c0d2
+      internalID: 1061734616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -177,13 +187,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-
     nameFileIdTable:
-      Untitled587_20231123230128_0: -875496867
-      Untitled587_20231123230128_1: -1490263962
-
-    nameFileIdTable: {}
-
+      Untitled587_20231123230128_0: -2021705439
+      Untitled587_20231123230128_1: 1061734616
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
