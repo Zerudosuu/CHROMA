@@ -13,4 +13,8 @@ public class ParallaxLayer : MonoBehaviour
         transform.localPosition = newPos;
     }
 
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

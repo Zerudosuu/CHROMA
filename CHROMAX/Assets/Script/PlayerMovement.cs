@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -66,7 +67,12 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight = !flip; // Update facingRight based on the flip value
 
+<<<<<<< Updated upstream
         var particleMain = dust.main;
         particleMain.startRotation = facingRight ? 0f : Mathf.PI; // Rotate particle based on movement direction
     }
+=======
+
+
+>>>>>>> Stashed changes
 }
