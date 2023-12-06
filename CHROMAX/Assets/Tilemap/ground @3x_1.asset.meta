@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:CHROMAX/Assets/Tilemap/ground @3x_1.asset.meta
 guid: 48131c2c596559349a37c29a287eceeb
+========
+guid: add562aacc827ee499c967a1e6017c9d
+>>>>>>>> parent of e07b19c (Improved Levels stages):CHROMAX/Assets/Tilemap/ground @3x_1 1.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
