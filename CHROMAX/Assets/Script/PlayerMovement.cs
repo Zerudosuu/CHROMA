@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -102,10 +103,10 @@ public class PlayerMovement : MonoBehaviour
 
     void WallJump()
     {
+
         int wallDirection = istouchingWall ? -1 : 1;
         rb.velocity = new Vector2(wallJumpForce * wallDirection, jumpPower);
         isJumping = true;
     }
 
-    
 }
