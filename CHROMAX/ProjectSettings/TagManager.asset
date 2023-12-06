@@ -10,7 +10,6 @@ TagManager:
   - Green
   - Ground
   - Wall
-  - Lava
   layers:
   - Default
   - TransparentFX
