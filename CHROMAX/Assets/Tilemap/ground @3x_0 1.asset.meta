@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:CHROMAX/Assets/Tilemap/ground @3x_0 1.asset.meta
 guid: 7e4a2daeefdda1944bed2d24865eab93
 ========
 guid: e150f2541d53920409c6dac238081e40
 >>>>>>>> parent of e07b19c (Improved Levels stages):CHROMAX/Assets/Tilemap/ground @3x_0.asset.meta
+=======
+<<<<<<<< HEAD:CHROMAX/Assets/Tilemap/ground @3x_10 1.asset.meta
+guid: 430e4b3becde4e44ea054f90cfc5732f
+========
+guid: 7e4a2daeefdda1944bed2d24865eab93
+>>>>>>>> parent of c38af29 (Merge branch 'Musayan'):CHROMAX/Assets/Tilemap/ground @3x_0 1.asset.meta
+>>>>>>> parent of c38af29 (Merge branch 'Musayan')
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

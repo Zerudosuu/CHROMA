@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:CHROMAX/Assets/Tilemap/ground @3x_10.asset.meta
 guid: 2a00fad11ca56eb4bbc0fe3db6deacd9
+========
+guid: e150f2541d53920409c6dac238081e40
+>>>>>>>> parent of c38af29 (Merge branch 'Musayan'):CHROMAX/Assets/Tilemap/ground @3x_0.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
