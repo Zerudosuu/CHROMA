@@ -49,10 +49,6 @@ MonoBehaviour:
   BlueBlock: {fileID: 290174180983384904, guid: 7c425bb4eb177544a9bd3cd9b29da280, type: 3}
   RedBlock: {fileID: 4580312862576084079, guid: 4b0a4853346cfad4ba2b685f774d40d9, type: 3}
   GreenBlock: {fileID: 5383083373481972505, guid: 411a59a996e276742bec87bef6c51731, type: 3}
-  yellowBlockRotationZ: 0
-  blueBlockRotationZ: 0
-  redBlockRotationZ: 0
-  greenBlockRotationZ: 0
   BlueRotation: 0
   RedRotation: 0
   YellowRotation: 0

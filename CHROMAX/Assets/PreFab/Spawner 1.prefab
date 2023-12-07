@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7463306482732449637
+--- !u!1 &1325316230716608171
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 889548193613632676}
-  - component: {fileID: 784040920739329854}
+  - component: {fileID: 7454431448770772165}
+  - component: {fileID: 8894065407709643149}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Spawner 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &889548193613632676
+--- !u!4 &7454431448770772165
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7463306482732449637}
+  m_GameObject: {fileID: 1325316230716608171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4329996, y: 0.9667476, z: 0.13576141}
@@ -32,23 +32,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &784040920739329854
+--- !u!114 &8894065407709643149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7463306482732449637}
+  m_GameObject: {fileID: 1325316230716608171}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 576fc90eaed22014480b6276f6e72226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefabs:
-  - {fileID: 8987203542634213499, guid: 61fad8c3d461d3d4ebedd1beff7f40a5, type: 3}
-  - {fileID: 290174180983384904, guid: 7c425bb4eb177544a9bd3cd9b29da280, type: 3}
-  - {fileID: 4580312862576084079, guid: 4b0a4853346cfad4ba2b685f774d40d9, type: 3}
-  - {fileID: 5383083373481972505, guid: 411a59a996e276742bec87bef6c51731, type: 3}
-  spawnCount: 350
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnCount: 300
   maxHeight: 150
   minDistanceBetweenPlatforms: 3

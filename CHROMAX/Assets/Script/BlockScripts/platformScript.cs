@@ -31,7 +31,7 @@ public class PlatformScript : MonoBehaviour
        float destroyY = maincamera.transform.position.y - distanceBelowCamera;
        
       if(transform.position.y < destroyY) { 
-         Destroy(gameObject);
+        gameObject.SetActive(false);
       }
    }
 }
